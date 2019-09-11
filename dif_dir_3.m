@@ -1,5 +1,4 @@
-%CŽm˜_•¶’ñˆÄƒAƒ‹ƒSƒŠƒYƒ€
-%—ÖŠs‹­“xE•ûŒü’Šo-“¯•ûŒü‹­’²-“ñ’l‰»-ƒ‰ƒxƒŠƒ“ƒO-–ÊÏ‚µ‚«‚¢’l-•\Ž¦
+
 %%
 clear;
 close all;
@@ -487,7 +486,7 @@ imtool(deg_rgb,[]);
 out =  dir_ana_c_mex(lap,dir,p_area,9);
 %     out = dir_ana_c(lap,dir,p_area,3);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%ŠÖ”“à•”
+%é–¢æ•°å†…éƒ¨
 % w = 3;
 % wh = fix(w/2);%1
 % out = zeros(size(lap));
@@ -512,7 +511,7 @@ out =  dir_ana_c_mex(lap,dir,p_area,9);
 %     end;
 % end;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%‚½‚Ô‚ñã‚Æ‚Ù‚Æ‚ñ‚Ç“¯‚¶
+%ãŸã¶ã‚“ä¸Šã¨ã»ã¨ã‚“ã©åŒã˜
 % w = 3;
 % wh = fix(w/2);
 % out = zeros(size(lap0));
@@ -553,7 +552,7 @@ out = out./10;
 imtool(out,[]);
 %%
 out_2bw = im2bw(uint8(out),5/255);
-%% “ñ’l‰»‚µ‚«‚¢’l’Tõ
+%% äºŒå€¤åŒ–ã—ãã„å€¤æŽ¢ç´¢
 %%%%% B
 % imtool(edge_senei,[]);
 % p0 = 0.18*mean(max(out(1000:1200,1501:2500),[],2))
@@ -562,10 +561,10 @@ out_2bw = im2bw(uint8(out),5/255);
 %     imtool(out_2bw,[]);
 % end;
 % imtool(out_2bw,[]);
-%% –ÊÏ”äŠr
+%% é¢ç©æ¯”è¼ƒ
 kami_dil_lab=uint32(bwlabeln(out_2bw,8));
-Lab1=kami_dil_lab(kami_dil_lab>0);%U‚è•ª‚¯‚½ƒ‰ƒxƒ‹‚Ì‚Ý‚ðˆê—ñ‚É
-Lab_hist=uint16(histc(Lab1,1:max(max(kami_dil_lab))));%ƒ‰ƒxƒ‹‚²‚Æ‚Ì–ÊÏ
+Lab1=kami_dil_lab(kami_dil_lab>0);%æŒ¯ã‚Šåˆ†ã‘ãŸãƒ©ãƒ™ãƒ«ã®ã¿ã‚’ä¸€åˆ—ã«
+Lab_hist=uint16(histc(Lab1,1:max(max(kami_dil_lab))));%ãƒ©ãƒ™ãƒ«ã”ã¨ã®é¢ç©
 Lab_hist1=(Lab_hist>30);
 Lab_hist2=[false;Lab_hist1];
 kami=Lab_hist2(kami_dil_lab+1);
@@ -578,7 +577,7 @@ deg_hsv(:,:,3) = out_2bw;
 deg_rgb = hsv2rgb(deg_hsv);
 imtool(deg_rgb,[]);
 
-%% F•t‚¯•\Ž¦
+%% è‰²ä»˜ã‘è¡¨ç¤º
 % if(size(kami,1)>=4097)
 %     kami(4097:size(kami,1),:)=[];
 % end;
